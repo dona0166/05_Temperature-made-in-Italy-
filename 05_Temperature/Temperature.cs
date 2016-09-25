@@ -36,11 +36,11 @@ namespace _05_Temperature
         {
             if (someunit == Unit.Celcius)
             {
-                Celcius = sometemp;
+                this.celcius = sometemp;
             }
             else
             {
-                Fahrenheit = sometemp;
+                this.fahrenheit = sometemp;
             }
         }
 
