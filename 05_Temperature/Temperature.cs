@@ -2,8 +2,12 @@
 
 namespace _05_Temperature
 {
-    
-    
+    public enum Unit
+    {
+        Celcius,
+        Fahrenheit
+    };
+
     public class Temperature
     {
         private double fahrenheit;
@@ -21,50 +25,24 @@ namespace _05_Temperature
             set { this.celcius = value; }
         }
 
-        public enum Unit
-        {
-            Celcius,
-            Fahrenheit,
-        };
+        
 
         public Temperature()
         {
 
         }
-
-        //public Unit cunit = Unit.Celcius;
-        //public Unit funit = Unit.Fahrenheit;
-
-
+        
         public Temperature(Unit someunit, double sometemp)
         {
             if (someunit == Unit.Celcius)
             {
                 Celcius = sometemp;
             }
-            if (someunit == Unit.Fahrenheit)
+            else
             {
                 Fahrenheit = sometemp;
             }
         }
-
-
-
-        //public Temperature(Unit v, int c)
-        //{
-        //    if (v == Unit.Celcius)
-        //    {
-        //        Celcius = c;
-        //    }
-        //    else
-        //    {
-        //        Fahrenheit = c;
-        //    }
-        //}
-        //public Temperature()
-        //{
-
-        //}
 
 
         public static double FahrenheitToCelcius(double f)
